@@ -1,2 +1,21 @@
-/target
-/neo4j.iml
+﻿# 忽略Idea生成的项目文件
+*.iml
+.idea/
+
+# 忽略eclipse的项目文件
+.project
+.classpath
+.settings/
+
+# 忽略所有target
+target/
+
+# 生成的jar包全部忽略
+war/
+temp/
+webapp/
+
+# 忽略war工程下的lib与class文件
+*/webapp/WEB-INF/classes/
+*/webapp/WEB-INF/lib/
+
