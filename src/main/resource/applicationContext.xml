@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:neo4j="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+ ">
+
+<!--    <context:spring-configured/>
+    <context:annotation-config/>
+    <bean id="transactionManager" class="org.springframework.data.neo4j.transaction.Neo4jTransactionManager">
+        <constructor-arg name="session" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="neo4JConfig" class="org.neo4j.ogm.config.Configuration">
+        <constructor-arg name="propertiesFilename" value="neo4j.properties"/>
+    </bean>
+    <bean id="sessionFactory" class="org.neo4j.ogm.session.SessionFactory">
+        <constructor-arg name="configuration" ref="neo4JConfig" index="0"/>
+        <constructor-arg name="packages" value="com.mo9.neo4j" index="1"/>
+    </bean>
+
+    <bean id="session" class="org.neo4j.ogm.session.SessionFactory" />
+
+    <neo4j:repositories base-package="com.mo9"/>-->
+</beans>
