@@ -1,4 +1,4 @@
-# 忽略Idea生成的项目文件
+﻿# 忽略Idea生成的项目文件
 *.iml
 .idea/
 
@@ -18,6 +18,4 @@ webapp/
 # 忽略war工程下的lib与class文件
 */webapp/WEB-INF/classes/
 */webapp/WEB-INF/lib/
-
-
 
