@@ -50,7 +50,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public void deleteAll() {
         userRepository.deleteAll();
+    }
+
+    @Override
+    @Transactional
+    public List findUserByMobile(String mobile) {
+        return userRepository.findByMobile(mobile);
     }
 }

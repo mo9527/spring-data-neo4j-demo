@@ -24,4 +24,6 @@ public interface UserService {
     List findByName(String name);
 
     public void deleteAll();
+
+    List findUserByMobile(String mobile);
 }

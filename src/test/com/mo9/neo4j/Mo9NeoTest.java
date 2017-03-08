@@ -11,13 +11,18 @@ import com.mo9.neo4j.domain.relation.User2DeviceRelationShip;
 import com.mo9.neo4j.service.CompaynService;
 import com.mo9.neo4j.service.DeviceService;
 import com.mo9.neo4j.service.UserService;
-import org.junit.jupiter.api.Test;
-import org.neo4j.graphdb.GraphDatabaseService;
-import org.neo4j.graphdb.Transaction;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.neo4j.transaction.Neo4jTransactionManager;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.context.support.XmlWebApplicationContext;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -28,12 +33,14 @@ import java.util.Date;
 public class Mo9NeoTest {
 
 
+
     @Test
-    @Transactional
     public void saveWithRelations(){
 
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(Neo4jConfig.class);
+//        ApplicationContext context = new AnnotationConfigApplicationContext(Neo4jConfig.class);
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/spring-core.xml");
+
         UserService userService = context.getBean(UserService.class);
         CompaynService compaynService = context.getBean(CompaynService.class);
         DeviceService deviceService = context.getBean(DeviceService.class);
@@ -103,7 +110,6 @@ public class Mo9NeoTest {
     }
 
 
-    @Test
     @Transactional
     public void deleteAllUser(){
         ApplicationContext context = new AnnotationConfigApplicationContext(Neo4jConfig.class);
@@ -112,7 +118,6 @@ public class Mo9NeoTest {
         userService.deleteAll();
     }
 
-    @Test
     @Transactional
     public void deleteAllCompany(){
         ApplicationContext context = new AnnotationConfigApplicationContext(Neo4jConfig.class);
@@ -122,4 +127,10 @@ public class Mo9NeoTest {
     }
 
 
+    public static void main(String[] args) {
+        Mo9NeoTest mo9NeoTest = new Mo9NeoTest();
+        mo9NeoTest.deleteAllCompany();
+        mo9NeoTest.deleteAllUser();
+        mo9NeoTest.saveWithRelations();
+    }
 }

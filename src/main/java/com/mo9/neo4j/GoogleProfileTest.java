@@ -1,6 +1,6 @@
 package com.mo9.neo4j;
 
-import com.mo9.neo4j.config.Neo4jConfig;
+//import com.mo9.neo4j.config.Neo4jConfig;
 import com.mo9.neo4j.service.GoogleProfileService;
 import com.mo9.neo4j.domain.GoogleProfile;
 import org.springframework.beans.BeansException;
