@@ -2,10 +2,12 @@ package com.mo9.neo4j.controller;
 
 import com.mo9.commonutil.web.JsonUtil;
 import com.mo9.core.web.annotation.ApiService;
+import com.mo9.core.web.annotation.RefBean;
 import com.mo9.core.web.entity.ResultEntity;
 import com.mo9.neo4j.domain.User;
 import com.mo9.neo4j.service.UserService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
@@ -17,8 +19,9 @@ import java.util.List;
  * @Date 2017/3/7 .
  * @Time 16:23 .
  */
+@RefBean
 @Component
-public class UserController {
+public class UserController{
     @Resource
     private UserService userService;
 

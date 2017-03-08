@@ -20,4 +20,6 @@
 
     <context:property-placeholder location="classpath*:com/mo9/commonutil/context/risk.properties"/>
 
+    <bean id="webAnnotationListener" class="com.mo9.neo4j.config.WebAnnotationListener"/>
+
 </beans>
