@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @ComponentScan(value = "com.mo9.neo4j") //neo4j的扫描包
-@EnableExperimentalNeo4jRepositories(basePackages = {"com.mo9.neo4j.dao"}) //repository所在的包，相当于dao层
+@EnableExperimentalNeo4jRepositories(basePackages = {"com.mo9.neo4j.repo"}) //repository所在的包，相当于dao层
 @EnableTransactionManagement
 public class Neo4jConfig{
     @Bean

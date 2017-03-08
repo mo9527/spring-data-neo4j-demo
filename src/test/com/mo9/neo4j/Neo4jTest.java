@@ -1,21 +1,5 @@
 package com.mo9.neo4j;
 
-import com.mo9.neo4j.dao.CommonRepository;
-import com.mo9.neo4j.dao.User2CompanyRepository;
-import com.mo9.neo4j.domain.Company;
-import com.mo9.neo4j.domain.User;
-import com.mo9.neo4j.domain.relation.User2CompanyRelationShip;
-import com.mo9.neo4j.service.CompaynService;
-import com.mo9.neo4j.service.UserService;
-import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.io.File;
-import java.util.Date;
-import java.util.List;
-
 /**
  * @Author wtwei
  * @Date 2017/3/2

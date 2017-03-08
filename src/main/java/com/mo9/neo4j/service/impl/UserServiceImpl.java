@@ -1,6 +1,6 @@
 package com.mo9.neo4j.service.impl;
 
-import com.mo9.neo4j.dao.UserRepository;
+import com.mo9.neo4j.repo.UserRepository;
 import com.mo9.neo4j.domain.User;
 import com.mo9.neo4j.service.UserService;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.mo9.neo4j;
 
 import com.mo9.neo4j.config.Neo4jConfig;
-import com.mo9.neo4j.dao.*;
+import com.mo9.neo4j.repo.*;
 import com.mo9.neo4j.domain.Company;
 import com.mo9.neo4j.domain.Device;
 import com.mo9.neo4j.domain.User;
@@ -12,17 +12,11 @@ import com.mo9.neo4j.service.CompaynService;
 import com.mo9.neo4j.service.DeviceService;
 import com.mo9.neo4j.service.UserService;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.data.neo4j.transaction.Neo4jTransactionManager;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.context.support.XmlWebApplicationContext;
 
-import javax.annotation.Resource;
 import java.util.Date;
 
 /**

@@ -1,4 +1,4 @@
-package com.mo9.neo4j.dao;
+package com.mo9.neo4j.repo;
 
 import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.Neo4jRepository;

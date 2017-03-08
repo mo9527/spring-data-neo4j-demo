@@ -1,4 +1,4 @@
-package com.mo9.neo4j.dao;
+package com.mo9.neo4j.repo;
 
 import com.mo9.neo4j.domain.Device;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
