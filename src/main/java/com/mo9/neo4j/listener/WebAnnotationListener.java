@@ -1,4 +1,4 @@
-package com.mo9.neo4j.config;
+package com.mo9.neo4j.listener;
 
 import com.mo9.core.web.annotation.RefBean;
 import com.mo9.core.web.exception.WebRuntimeException;
