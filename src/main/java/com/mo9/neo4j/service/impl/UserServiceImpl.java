@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,8 +40,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public Iterable<User> findAll() {
-        return userRepository.findAll();
+    public List<User> findAll() {
+        Iterable<User> tmpUsers = userRepository.findAll();
+        List<User> users = new ArrayList<>();
+        for (User tmpUser : tmpUsers) {
+            users.add(tmpUser);
+        }
+        return users;
     }
 
     @Override

@@ -19,7 +19,7 @@ public interface UserService {
 
     User findById(Long id);
 
-    Iterable<User> findAll();
+    List<User> findAll();
 
     List findByName(String name);
 
