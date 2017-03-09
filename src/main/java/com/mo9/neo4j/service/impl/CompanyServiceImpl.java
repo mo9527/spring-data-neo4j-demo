@@ -1,6 +1,6 @@
 package com.mo9.neo4j.service.impl;
 
-import com.mo9.neo4j.dao.CompaynRepository;
+import com.mo9.neo4j.repo.CompaynRepository;
 import com.mo9.neo4j.domain.Company;
 import com.mo9.neo4j.service.CompaynService;
 import org.springframework.stereotype.Service;

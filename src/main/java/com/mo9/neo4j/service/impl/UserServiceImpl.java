@@ -1,12 +1,13 @@
 package com.mo9.neo4j.service.impl;
 
-import com.mo9.neo4j.dao.UserRepository;
+import com.mo9.neo4j.repo.UserRepository;
 import com.mo9.neo4j.domain.User;
 import com.mo9.neo4j.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,8 +40,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public Iterable<User> findAll() {
-        return userRepository.findAll();
+    public List<User> findAll() {
+        Iterable<User> tmpUsers = userRepository.findAll();
+        List<User> users = new ArrayList<>();
+        for (User tmpUser : tmpUsers) {
+            users.add(tmpUser);
+        }
+        return users;
     }
 
     @Override
@@ -50,7 +56,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public void deleteAll() {
         userRepository.deleteAll();
+    }
+
+    @Override
+    @Transactional
+    public List findUserByMobile(String mobile) {
+        return userRepository.findByMobile(mobile);
     }
 }

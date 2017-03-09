@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd"
+>
+
+    <!--在相应的服务类上加入@RefBean注解即可完成注册，不需要此配置-->
+    <!--<bean id="myUserService" class="com.mo9.core.web.service.ApiServiceFactoryBean">
+        <property name="innerClass" value="com.mo9.neo4j.controller.UserController"/>
+    </bean>-->
+    
+</beans>

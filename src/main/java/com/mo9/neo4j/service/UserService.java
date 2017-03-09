@@ -19,9 +19,11 @@ public interface UserService {
 
     User findById(Long id);
 
-    Iterable<User> findAll();
+    List<User> findAll();
 
     List findByName(String name);
 
     public void deleteAll();
+
+    List findUserByMobile(String mobile);
 }

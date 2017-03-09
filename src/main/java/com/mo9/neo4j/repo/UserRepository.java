@@ -1,4 +1,4 @@
-package com.mo9.neo4j.dao;
+package com.mo9.neo4j.repo;
 
 import com.mo9.neo4j.domain.User;
 import org.springframework.data.neo4j.annotation.Query;
@@ -16,4 +16,7 @@ public interface UserRepository extends Neo4jRepository<User> {
 
     @Query("MATCH (n:User {name:{name}}) RETURN n  ")
     List<User> findByName(@Param("name") String name);
+
+    @Query("MATCH (n:User {mobile:{mobile}}) RETURN n  ")
+    List<User> findByMobile(@Param("mobile") String mobile);
 }

@@ -1,7 +1,6 @@
-package com.mo9.neo4j.dao;
+package com.mo9.neo4j.repo;
 
 import com.mo9.neo4j.domain.Company;
-import org.springframework.data.neo4j.repository.GraphRepository;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 
 /**
