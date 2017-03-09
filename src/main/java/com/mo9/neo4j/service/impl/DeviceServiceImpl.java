@@ -1,6 +1,6 @@
 package com.mo9.neo4j.service.impl;
 
-import com.mo9.neo4j.dao.DeviceRepository;
+import com.mo9.neo4j.repo.DeviceRepository;
 import com.mo9.neo4j.domain.Device;
 import com.mo9.neo4j.service.DeviceService;
 import org.springframework.stereotype.Service;

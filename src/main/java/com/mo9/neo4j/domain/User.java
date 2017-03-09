@@ -39,10 +39,10 @@ public class User {
     }
 
     @Relationship(type = Mo9RelationType.OWNED_DEVICE)
-    private Set<Device> owenDevices = new HashSet<>();
+    private Set<Device> ownDevices = new HashSet<>();
 
     public void hadDevice(Device device){
-        owenDevices.add(device);
+        ownDevices.add(device);
     }
 
 
