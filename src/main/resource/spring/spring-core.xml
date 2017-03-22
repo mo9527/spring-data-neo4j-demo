@@ -11,15 +11,11 @@
                 http://www.springframework.org/schema/tx
                 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <import resource="classpath:springmvc.xml"/>
     <context:annotation-config/>
     <context:component-scan base-package="com.mo9.neo4j"/>
     <context:component-scan base-package="org.neo4j.ogm"/>
 
     <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 
-    <context:property-placeholder location="classpath*:com/mo9/commonutil/context/risk.properties"/>
-
-    <bean id="webAnnotationListener" class="com.mo9.neo4j.listener.WebAnnotationListener"/>
 
 </beans>
