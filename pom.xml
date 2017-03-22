@@ -12,18 +12,6 @@
         <war.output>war</war.output>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>Internal Releases</name>
-            <url>http://maven.mo9.com/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>Snapshots</id>
-            <name>Internal Snapshots</name>
-            <url>http://maven.mo9.com/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <dependencies>
 
@@ -95,6 +83,11 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
 
 
     </dependencies>
@@ -149,15 +142,7 @@
                     <doCheck>false</doCheck>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
-                <configuration>
-                    <outputDirectory>${war.output}</outputDirectory>
-                    <warName>${project.artifactId}${buildNumber}</warName>
-                </configuration>
-            </plugin>
+
         </plugins>
 
     </build>
